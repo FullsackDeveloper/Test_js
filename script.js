@@ -37,21 +37,22 @@ function main_job(questions) {
         function reply(l) {
             l[0] = prompt(`${number}-question\n  
             ${questions[i].question}\n
-            a)${questions[i].answers[0]}\n
-            b)${questions[i].answers[1]}\n
-            c)${questions[i].answers[2]}\n
+            0.Finish the test \n
+            a)${questions[i].answers[0]}
+            b)${questions[i].answers[1]}
+            c)${questions[i].answers[2]}
             d)${questions[i].answers[3]}`
             );
         };
         reply(l);
 
         if (l[0].toLowerCase() == questions[i].answer[0]) { counter++; }
+        if (l[0].toLowerCase() == 0) { break; }
 
         while (!(l[0].toLowerCase() == "a" || l[0].toLowerCase() == "b" || l[0].toLowerCase() == "c" || l[0].toLowerCase() == "d")) {
             alert(`Enter only the letters given in the option.`);
             reply(l);
         }
-
 
 
 
